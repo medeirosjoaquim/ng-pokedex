@@ -1,0 +1,42 @@
+<!-- <app-pokemon-search (searchEvent)="search($event)"></app-pokemon-search> -->
+<div class="container" *ngIf="pagedResult$ | async as paged">
+  <div class="row">
+    <div
+      class="pokemon-card {{
+        pokemon.id < 150 ? appendData[pokemon.id - 1]['types'][0] : ''
+      }}"
+      *ngFor="
+        let pokemon of (pagedResult$ | async).results | search: searchValue
+      "
+    >
+      <div class="sprite avatar" (click)="goToDetails(pokemon.id)">
+        <img src="{{ spritesUrl + pokemon.id }}.png" style="width: 100px;" />
+      </div>
+      <div class="pokemon-info"  (click)="like(pokemon.name)">
+        <div class="pokemon--favorite">
+        <button class="btn btn-fav">
+          <fa-icon [icon]="(favoritesList | isFavoritePokemon: pokemon.name) ? solidHeart : outlinedHeart"></fa-icon></button>
+        </div>
+        <div class="pokemon--name">{{ pokemon.name | uppercase }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <button
+      *ngIf="paged.previous"
+      type="button"
+      class="btn btn-primary"
+      (click)="getPokemons(paged.previous)"
+    >
+      Anterior
+    </button>
+    <button
+      *ngIf="paged.next"
+      type="button"
+      class="btn btn-primary"
+      (click)="getPokemons(paged.next)"
+    >
+      Próximo
+    </button>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+.container {
+  margin-top: 20px;
+  width: 90vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  background-color: rgb(189, 33, 50);
+  font-family: "Press Start 2P", cursive;
+  .pokemon--app {
+    min-height: 80%;
+    width: 96%;
+    margin: 8px;
+    background-color: black;
+    color: white;
+    padding-bottom: 16px;
+    .pokemon--info {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .description {
+        border: 2px dashed white;
+        width: 90%;
+        padding: 16px;
+        > ul > li {
+          list-style: none;
+          margin: 8px 0;
+          > .abilities {
+            padding-top: 16px;
+            padding-left: 8px;
+          }
+        }
+      }
+      .sprite {
+        height: 125px;
+      }
+      .sprite > img {
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 190px;
+      }
+    }
+  }
+  button {
+    height: 40px;
+    min-width: 80px;
+    margin: 8px;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    height: 100vh;
+    .pokemon--app {
+      min-height: 80%;
+      .pokemon--info {
+        .sprite {
+          height: 160px;
+        }
+        .sprite > img {
+          position: absolute;
+          top: 3%;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 130px;
+        }
+      }
+    }
+  }
+}

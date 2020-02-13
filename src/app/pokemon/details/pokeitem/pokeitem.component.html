@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="pokemon--app" id="pokeinfo">
+    <div class="pokemon--info" *ngIf="pokemon$ | async as pokemon">
+      <div class="sprite">
+        <img src="{{ pokemon.sprites.front_default }}" alt="pokemon.name" />
+      </div>
+      <div class="description">
+        <ul>
+          <li>nome: {{ pokemon.name }}</li>
+          <li>altura: {{ pokemon.height / 10 }}m</li>
+          <li>peso: {{ pokemon.weight / 10 | number }}kg</li>
+          <li>
+            habilidades:
+            <div class="abilities">
+              <li *ngFor="let ability of abilities">* {{ ability }}</li>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="action">
+        <a routerLink="../../list">
+          <button type="button" class="btn btn-primary">Voltar</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
