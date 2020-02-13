@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/medeirosjoaquim/ng-pokedex.svg?token=Nfdt9KzNxomwmeF6q4cR&branch=master)](https://travis-ci.com/medeirosjoaquim/ng-pokedex)
+
 # Angular pokedex
 
 <br />
@@ -5,7 +7,6 @@
     <img src="./logo.png" alt="Logo" width="180">
 <p align="center">
   <a href="#o-que-é">O que é</a> •
-  <a href="#demo">Demo online</a> •
   <a href="#pwa">PWA</a> •
   <a href="#instalação">Instalação</a> •
   <a href="#rodar">Rodar</a> •
