@@ -15,7 +15,7 @@
 
 ## O que é
 
-* Encontre um pokemón e as suas características, com Angular 9!
+* App criado com Angular 9 e NGRX. Lista pokemóns e seus detalhes consumindo dados da pokeapi.co
 
 ## Demo
 * A demo pode ser acessada nesse <a href="https://ngrx-pokedex.herokuapp.com">link</a>
