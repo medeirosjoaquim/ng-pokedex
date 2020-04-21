@@ -36,13 +36,13 @@
         }
       }
       .sprite {
+        position: absolute;
         height: 125px;
+        top: 0;
+        transform: translateX(-50%);
+        animation: slideFromTop .5s;
       }
       .sprite > img {
-        position: absolute;
-        top: 3%;
-        left: 50%;
-        transform: translateX(-50%);
         height: 190px;
       }
     }
@@ -64,7 +64,6 @@
         }
         .sprite > img {
           position: absolute;
-          top: 3%;
           left: 50%;
           transform: translateX(-50%);
           height: 130px;
@@ -73,3 +72,13 @@
     }
   }
 }
+
+@keyframes slideFromTop {
+  0% { top: -100%; }
+}
+
+
+// @-webkit-keyframes  slideFromTop {
+//   0% { top: 25%; }
+//   100% {   top: 70%; }   
+// }
