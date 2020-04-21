@@ -49,7 +49,10 @@ pelo navegador em localhost:4200
 
 Os testes podem ser executados com o comando:
 ```ng test```
-## Contato
 
-Mande um e-mail! johnboxcodes@gmail.com! Ou diga oi no Linkedin:
-linkedin.com/in/joaquim-medeiros/
+## Contribuindo
+
+Faça um fork do projeto. Siga os passos de instalação. Crie uma
+branch a partir da branch develop!
+
+Cheque as issues abertas ou abra uma <a href="https://github.com/medeirosjoaquim/ng-pokedex/issues"> aqui</a>
